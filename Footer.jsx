@@ -82,21 +82,16 @@ const Footer = () => {
 
         <footer className="bg-[#2A2346] mt-72 lg:mt-0">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-                <a href="/" className="flex items-center">
-                    <img
-                        className="w-24"
-                        src={whiteLogo}
-                        alt="Feteflex logo" />
-                </a>
+                
                 <div className="md:grid md:grid-cols-2 lg:grid-cols-2 gap-10" id='contact'>
                     <ScrollAnimation duration={2} animateIn="fadeInLeft" animateOnce={true} initiallyVisible={true}>
                         <div className="mb-6 md:mb-0">
                             <div className='my-10'>
-                                <h2 className="mb-6 text-sm font-semibold text-white">Join waitlist</h2>
+                                <h2 className="mb-6 text-2xl font-semibold text-white">Join waitlist</h2>
                                 <div className="glass p-5 items-center rounded-lg">
                                     <div className='w-full col-span-2'>
-                                        <h2 className='text-white text-2xl'>Work with us</h2>
-                                        <p className='text-sm text-white my-3'>Get early access and be the first to partner with us by creating a business account</p>
+                                        <h2 className='text-dark text-2xl'>Work with us</h2>
+                                        <p className='text-sm text-dark my-3'>Get early access and be the first to partner with us by creating a business account</p>
                                         <form onSubmit={onSubmit}>
                                             <div className='inputs'>
                                                 <GlassInputNoButton placeholder="Full Name" value={fullName} onChange={onChange} error={errors.fullName} type={'text'} name='fullName' />

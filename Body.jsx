@@ -20,9 +20,20 @@ import rec1 from '../assets/Rectangle-1.png'
 import rec2 from '../assets/Rectangle-2.png'
 import rec3 from '../assets/Rectangle-3.png'
 
+import video from '../assets/video.png'
+
 import iphone1 from '../assets/iPhone 13.png'
 import iphone2 from '../assets/iPhone 13-2.png'
 import iphone3 from '../assets/iPhone 13-3.png'
+
+import phone1 from '../assets/phone1.png'
+import phone2 from '../assets/phone2.png'
+import phone3 from '../assets/phone3.png'
+import phone4 from '../assets/phone4.png'
+import phone5 from '../assets/phone5.png'
+import phone6 from '../assets/phone6.png'
+import phone7 from '../assets/phone7.png'
+
 
 import { features } from '../app/objects'
 import Footer from './Footer'
@@ -175,23 +186,100 @@ const Body = () => {
             </Fragment>
 
             <Fragment>
-                <div className="bg-[#f1eef7]">
+                <div className="bg-gradient">
                     <h3 className='text-[#2A2346] text-3xl text-center max-w-3xl lg:max-w-7xl pt-10 mx-auto font-bold px-4 lg:px-0'>Tell Us What You Are Planning</h3>
                     <div className='flex justify-center'>
                         <p className='lg:max-w-xl text-center text-md my-3'>Whether you&apos;re organizing a wedding, concert, birthday party, corporate event, or beach party, our platform has everything you need to ensure seamless experiences for you.</p>
                     </div>
 
-                    <div className='mx-auto max-w-3xl lg:max-w-6xl py-10'>
-                        <div className='flex justify-center'>
-                            <div className="lg:max-w-7xl">
+                    <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
+                        <div className='lg:ml-20 ml-5 mt-10 no-scrollbar overflow-x-auto overflow-visible flex phones'>
+                            <img src={phone1} alt="" className='w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone2} alt="" className='w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone3} alt="" className='w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone4} alt="" className='w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone5} alt="" className='w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone6} alt="" className='w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone7} alt="" className='w-64 lg:mr-20 mr-10 mt-20' />
+                        </div>
+                    </ScrollAnimation>
 
+
+
+                    <div className='mx-auto lg:max-w-7xl p-6 my-20'>
+                        <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+                            {features.map((feature) => (
+                                <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true} key={feature.name}>
+                                    <div className="feature-item position-relative animate-fade-up animate-once animate-delay-400 animate-alternate text-white overflow-hidden rounded-lg" id='feature'>
+                                        <div className='img-fluid h-80 bg-white w-full object-cover' alt="Ticketing">
+                                            <div className='feature-overlay'>
+                                                <dt className="text-sm mt-5 font-semibold leading-7 text-white-900">
+                                                    <div className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#170C49]">
+                                                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                                                    </div>
+                                                </dt>
+                                                <dd className="mt-2 text-center text-lg p-5 leading-7 text-[#3A2B5A]">{feature.description}</dd>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </ScrollAnimation>
+                            ))}
+                        </dl>
+
+                        <Fragment>
+                            <div className='lg:mt-28 my-10 flex video justify-items-center'>
+                                <img src={video} className='lg:w-2/4 flex justify-items-center' alt="" />
                             </div>
+                        </Fragment>
+                    </div>
+
+                </div>
+            </Fragment>
+
+            <Fragment>
+                <div className='bg-[#f1eef7] -z-50'>
+                    <div className="mx-auto max-w-3xl lg:max-w-7xl">
+                        <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-8 lg:grid-cols-2 md:grid-cols-2">
+                            <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
+                                <div className="lg:my-20 relative">
+                                    <h3 className="text-[#2A2346] text-3xl mt-5 text-align font-bold animate-once animate-delay-300 animate__animated animate__zoomIn">
+                                        Join Our Waitlist</h3>
+                                    <img alt='curve' src={curve} className='w-48 absolute bottom-30' />
+                                    <p className="md:text-sm text-lg py-5 text-dark animate-once animate-delay-400 animate__animated animate__zoomIn">Be the first to experience the Feteflex mobile app. Skip the line
+                                        and join the waitlist for early access and special perks. Your friends
+                                        won&apos;t be talking about this yet. Get ahead of the curve and join the
+                                        waitlist for the coolest thing coming soon.</p>
+                                    <GlassInput />
+                                </div>
+                            </ScrollAnimation>
+
+                            <div className="grid animate-fade-up lg:absolute lg:right-0 animate-once animate-delay-400 justify-items-end lg:justify-items-center">
+                                <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
+                                    <img src={image6} className='lg:w-4/5 w-full' alt="Landing Image" />
+                                </ScrollAnimation>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </Fragment>
 
             <Fragment>
+                <div className='bg-[#f1eef7] -z-50'>
+                    <div className="mx-auto max-w-3xl p-6 lg:max-w-7xl">
+                        <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
+                            <div>
+                                <h3 className="text-[#2A2346] text-3xl mt-5 text-align font-bold animate-once animate-delay-300 animate__animated animate__zoomIn">
+                                    Got Any Question?</h3>
+                                <p className="md:text-sm text-lg py-5 text-dark animate-once animate-delay-400 animate__animated animate__zoomIn">Wandering what Feteflex got in store for you? what challenges its solving? or how it can improve your business to get more clients? the opportunities are endless </p>
+                            </div>
+                        </ScrollAnimation>
+                    </div>
+                </div>
+            </Fragment>
+
+            {/* <Fragment>
                 <div className="features" id='features'>
                     <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20 lg:mb-40' id='organizer'>
                         <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-2 md:grid-cols-2">
@@ -359,33 +447,7 @@ const Body = () => {
                 </div>
             </Fragment>
 
-            <Fragment>
-                <div className='mini-section -z-50'>
-                    <div className="mx-auto max-w-3xl lg:max-w-7xl">
-                        <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-8 lg:grid-cols-2 md:grid-cols-2">
-                            <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                                <div className="lg:my-20 relative">
-                                    <h1 className="lg:text-3xl mt-5 text-align text-white tracking-tight text-2xl font-semibold animate-once animate-delay-300 animate__animated animate__zoomIn">
-                                        Join Our waitlist</h1>
-                                    <img alt='curve' src={curve} className='w-48 absolute bottom-30' />
-                                    <p className="md:text-sm text-sm py-5 font-normal text-white animate-once animate-delay-400 animate__animated animate__zoomIn">Be the first to experience the Feteflex mobile app. Skip the line
-                                        and join the waitlist for early access and special perks. Your friends
-                                        won&apos;t be talking about this yet. Get ahead of the curve and join the
-                                        waitlist for the coolest thing coming soon.</p>
-                                    <GlassInput />
-                                </div>
-                            </ScrollAnimation>
-
-                            <div className="grid animate-fade-up lg:absolute lg:right-0 animate-once animate-delay-400 justify-items-end lg:justify-items-center">
-                                <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                                    <img src={image6} className='lg:w-4/5 w-full' alt="Landing Image" />
-                                </ScrollAnimation>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </Fragment>
+            
 
             <Fragment>
                 <div className='group2'>
@@ -419,9 +481,7 @@ const Body = () => {
 
             </Fragment>
 
-            <Fragment>
-                <div className='video mt-96 lg:mt-0' />
-            </Fragment>
+            
 
             <Fragment>
                 <div className='group5'>
@@ -448,7 +508,7 @@ const Body = () => {
                         </div>
                     </div>
                 </div>
-            </Fragment>
+            </Fragment> */}
 
             <Fragment>
                 <Footer />
