@@ -15,7 +15,7 @@ const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 	return (
-		<header className="relative z-50 inset-x-0 header-bg">
+		<header className="relative container z-50 inset-x-0 header-bg">
 			<nav className="flex items-center justify-between rounded-b-lg p-6 lg:px-32 fixed top-0 left-0 right-0 bg-[#F1EEF7]" aria-label="Global">
 				<div className="flex lg:flex-1">
 					<a href="/" className="-m-1.5 p-1.5">

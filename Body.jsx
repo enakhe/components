@@ -49,10 +49,10 @@ const Body = () => {
         <Fragment>
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
             <div className='bg-[#f1eef7]'>
-                <div className="mx-auto lg:pt-10 lg:px-12">
-                    <div className="grid py-20 gap-5 sm:grid-cols-1 items-center lg:px-20 lg:grid-cols-2 md:grid-cols-2">
-                        <div className="grid lg:justify-items-center p-6">
-                            <div>
+                <div className="mx-auto max-w-3xl lg:max-w-7xl lg:pt-10">
+                    <div className="grid py-12 gap-5 sm:grid-cols-1 items-center lg:grid-cols-2 md:grid-cols-2">
+                        <div className="grid lg:justify-items-center mt-6">
+                            <div className='px-6 lg:px-0'>
                                 <h1 className="lg:text-4xl mt-5 text-align text-[#2A2346] tracking-tight text-4xl font-semibold animate-once animate-delay-300 animate__animated animate__zoomIn heading-text">
                                     Transforming <span className='text-[#8663A6]'>event planing</span> with
                                     technology and innovation
@@ -63,7 +63,7 @@ const Body = () => {
                                     <GlassInput />
                                 </div>
                                 <div className='lg:hidden'>
-                                    <Button variant="gradient" color="white" className='font-family w-full text-md capitalize bg-[#2A2346] text-[#F1EEF7]'>
+                                    <Button variant="gradient" color="white" className='font-family w-48 text-md capitalize bg-[#2A2346] text-[#F1EEF7]'>
                                         Join Waitlist
                                     </Button>
                                 </div>
@@ -99,7 +99,7 @@ const Body = () => {
                                 </ScrollAnimation>
 
                             </div>
-                            <div className="grid col-span-2 lg:col-span-1 animate-fade-up animate-once animate-delay-400 lg:justify-items-center">
+                            <div className="grid col-span-2 lg:col-span-1 animate-fade-up animate-once animate-delay-400 justify-items-center">
                                 <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
                                     <img src={logoMulti} className='w-96' alt="Landing Image" />
                                 </ScrollAnimation>
@@ -111,23 +111,23 @@ const Body = () => {
 
             <Fragment>
                 <div className="bg-[#f1eef7]">
-                    <div className='mx-auto max-w-3xl lg:max-w-4xl py-10'>
-                        <h3 className='text-[#2A2346] text-3xl text-center font-bold'>One App That Gets It All Done</h3>
+                    <div className='mx-auto max-w-3xl lg:max-w-7xl py-10'>
+                        <h3 className='text-[#2A2346] text-3xl p-6 text-center font-bold'>One App That Gets It All Done</h3>
 
                         <div className="">
                             <ScrollAnimation className='grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-3' duration={1} animateIn="fadeInUp" animateOnce={true}>
-                                <div className='bg-[#ffffff] w-full lg:max-w-64 rounded-2xl'>
-                                    <h3 className='lg:text-xl text-2xl text-[#2A2346] font-bold p-6'>Where Party Is <br /> Made Flexible</h3>
+                                <div className='bg-[#ffffff] w-full rounded-2xl'>
+                                    <h3 className='text-2xl text-[#2A2346] font-bold p-6'>Where Party Is <br /> Made Flexible</h3>
                                     <img src={rec1} className='w-48 float-end' />
                                 </div>
 
-                                <div className='bg-[#ffffff] w-full lg:max-w-64 rounded-2xl'>
-                                    <h3 className='lg:text-xl text-2xl text-[#2A2346] font-bold p-6'>Imagination <br /> Meets Creativity</h3>
+                                <div className='bg-[#ffffff] w-full rounded-2xl'>
+                                    <h3 className='text-2xl text-[#2A2346] font-bold p-6'>Imagination <br /> Meets Creativity</h3>
                                     <img src={rec2} className='w-48 float-end' />
                                 </div>
 
-                                <div className='bg-[#ffffff] w-full lg:max-w-64 rounded-2xl'>
-                                    <h3 className='lg:text-xl text-2xl text-[#2A2346] font-bold p-6'>To Set Memorable <br /> Magical Moment</h3>
+                                <div className='bg-[#ffffff] w-full rounded-2xl'>
+                                    <h3 className='text-2xl text-[#2A2346] font-bold p-6'>To Set Memorable <br /> Magical Moment</h3>
                                     <img src={rec3} className='w-48 float-end' />
                                 </div>
                             </ScrollAnimation>
@@ -138,33 +138,36 @@ const Body = () => {
 
             <Fragment>
                 <div className="bg-[#F8F8F8]">
-                    <h3 className='text-[#2A2346] text-3xl max-w-3xl lg:max-w-7xl pt-10 mx-auto font-bold px-4 lg:px-0'>Are You Planning an Event or Offering Event Services</h3>
-                    <div className='mx-auto max-w-3xl lg:max-w-6xl py-10'>
+                    <h3 className='text-[#2A2346] text-3xl max-w-3xl lg:max-w-7xl pt-10 mx-auto font-bold px-6 lg:px-0'>Are You Planning an Event or Offering Event Services</h3>
+                    <div className='mx-auto max-w-3xl lg:max-w-7xl py-10'>
                         <div className='flex justify-center'>
-                            <div className="lg:max-w-7xl">
-                                <ScrollAnimation className='grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-3' duration={1} animateIn="fadeInUp" animateOnce={true}>
-                                    <div className='bg-[#ffffff] w-full lg:max-w-lg rounded-2xl col-start-1 col-end-7 lg:col-start-1 lg:col-end-4'>
-                                        <h3 className='text-lg text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Your Events</h3>
-                                        <div className='grid gap-5 sm:grid-cols-1 items-center lg:grid-cols-2'>
-                                            <p className='px-6 mt-2 text-[#2A2346] text-lg leading-relaxed'>Browse through a diverse range of options, by location, vendor type, budget to find exactly what they need.</p>
-                                            <div className='justify-items-end px-6'>
-                                                <img src={iphone1} className='w-48 float-end' />
+                            <div className="">
+                                <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true}>
+
+                                    <div className='grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-0 lg:grid-cols-2'>
+                                        <div className='bg-[#ffffff] rounded-2xl'>
+                                            <h3 className='text-3xl text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Your Events</h3>
+                                            <div className='grid gap-5 sm:grid-cols-1 items-center lg:grid-cols-2'>
+                                                <p className='px-6 mt-2 text-[#2A2346] text-lg leading-relaxed'>Browse through a diverse range of options, by location, vendor type, budget to find exactly what they need.</p>
+                                                <div className='justify-items-end mt-6 px-6'>
+                                                    <img src={iphone1} className='w-96 float-end' />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className='bg-[#ffffff] rounded-2xl'>
+                                            <h3 className='text-3xl text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Service Providers</h3>
+                                            <div className='grid gap-5 sm:grid-cols-1 items-center lg:grid-cols-2'>
+                                                <p className='px-6 mt-2 text-[#2A2346] text-lg leading-relaxed'>Event service providers now have the chance to showcase their unique offerings, and attract more clients</p>
+                                                <div className='justify-items-end mt-6 px-6'>
+                                                    <img src={iphone2} className='w-96 float-end' />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className='bg-[#ffffff] w-full max-w-lg rounded-2xl col-start-1 col-end-7 lg:col-end-7 lg:col-span-2'>
-                                        <h3 className='text-lg text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Service Providers</h3>
-                                        <div className='grid gap-5 sm:grid-cols-1 items-center lg:grid-cols-2'>
-                                            <p className='px-6 mt-2 text-[#2A2346] text-lg leading-relaxed'>Event service providers now have the chance to showcase their unique offerings, and attract more clients</p>
-                                            <div className='justify-items-end px-6'>
-                                                <img src={iphone2} className='w-48 float-end' />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className='bg-[#ffffff] w-full max-w-fit rounded-2xl col-start-1 col-end-7'>
-                                        <div className='grid gap-5 sm:grid-cols-1 items-end lg:grid-cols-3'>
+                                    <div className='bg-[#ffffff] w-full rounded-2xl col-start-1 col-end-6'>
+                                        <div className='grid gap-5 mr-6 sm:grid-cols-1 items-end lg:grid-cols-3'>
                                             <div className='lg:col-span-2 my-5 px-6'>
                                                 <h3 className='text-2xl text-[#2A2346] font-bold'>From Intimate Gatherings to Grand Celebrations</h3>
                                                 <h2 className='text-lg text-[#8563A6] font-semibold'>Make Every Bookings With Confidence</h2>
@@ -173,8 +176,8 @@ const Body = () => {
                                                     Join Waitlist
                                                 </Button>
                                             </div>
-                                            <div className='lg:justify-items-end flex mt-10 lg:mr-6 lg-mt-0 justify-items-center'>
-                                                <img src={iphone3} className='w-full flex justify-items-center float-end lg:mr-5' />
+                                            <div className='lg:justify-items-end flex justify-items-center'>
+                                                <img src={iphone3} className='w-full flex mr-6 justify-items-center' />
                                             </div>
                                         </div>
                                     </div>
@@ -233,23 +236,24 @@ const Body = () => {
                             </div>
                         </Fragment>
                     </div>
-
                 </div>
-            </Fragment>
 
-            <Fragment>
-                <div className='bg-[#f1eef7] -z-50'>
-                    <div className="mx-auto max-w-3xl p-6 lg:max-w-7xl">
-                        <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                            <div>
-                                <h3 className="text-[#2A2346] text-3xl mt-5 text-align font-bold animate-once animate-delay-300 animate__animated animate__zoomIn">
-                                    Got Any Question?</h3>
-                                <p className="text-[#2A2346] text-lg py-5 text-dark animate-once animate-delay-400 animate__animated animate__zoomIn">Wandering what Feteflex got in store for you? what challenges its solving? or how it can improve your business to get more clients? the opportunities are endless </p>
-                            </div>
-                        </ScrollAnimation>
+                <Fragment>
+                    <div className='bg-[#f1eef7] -z-50'>
+                        <div className="mx-auto max-w-3xl p-6 lg:max-w-7xl">
+                            <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
+                                <div>
+                                    <h3 className="text-[#2A2346] text-3xl mt-5 text-align font-bold animate-once animate-delay-300 animate__animated animate__zoomIn">
+                                        Got Any Question?</h3>
+                                    <p className="text-[#2A2346] text-lg py-5 text-dark animate-once animate-delay-400 animate__animated animate__zoomIn">Wandering what Feteflex got in store for you? what challenges its solving? or how it can improve your business to get more clients? the opportunities are endless </p>
+                                </div>
+                            </ScrollAnimation>
+                        </div>
                     </div>
-                </div>
+                </Fragment>
             </Fragment>
+
+
 
             {/* <Fragment>
                 <div className="features" id='features'>
