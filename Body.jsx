@@ -202,9 +202,7 @@ const Body = () => {
                         </div>
                     </ScrollAnimation>
 
-
-
-                    <div className='mx-auto lg:max-w-7xl p-6 my-20'>
+                    <div className='mx-auto lg:max-w-7xl p-6 pt-20'>
                         <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
                             {features.map((feature) => (
                                 <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true} key={feature.name}>
@@ -241,8 +239,6 @@ const Body = () => {
                         </Fragment>
                     </div>
                 </div>
-
-
             </Fragment>
 
             <Fragment>
