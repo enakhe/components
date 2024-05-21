@@ -1,6 +1,6 @@
 import whiteLogo from '../assets/header-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faFacebook, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faXTwitter, faFacebook, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { navigation } from '../app/objects';
 import { useDispatch, useSelector } from "react-redux";
 import GlassInputNoButton from './GlassInputNoButton';
@@ -82,74 +82,70 @@ const Footer = () => {
 
         <footer className="bg-[#2A2346] mt-72 lg:mt-0">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-                
-                <div className="md:grid md:grid-cols-2 lg:grid-cols-2 gap-10" id='contact'>
-                    <ScrollAnimation duration={2} animateIn="fadeInLeft" animateOnce={true} initiallyVisible={true}>
-                        <div className="mb-6 md:mb-0">
-                            <div className='my-10'>
-                                <h2 className="mb-6 text-2xl font-semibold text-white">Join waitlist</h2>
-                                <div className="glass p-5 items-center rounded-lg">
-                                    <div className='w-full col-span-2'>
-                                        <h2 className='text-dark text-2xl'>Work with us</h2>
-                                        <p className='text-sm text-dark my-3'>Get early access and be the first to partner with us by creating a business account</p>
-                                        <form onSubmit={onSubmit}>
-                                            <div className='inputs'>
-                                                <GlassInputNoButton placeholder="Full Name" value={fullName} onChange={onChange} error={errors.fullName} type={'text'} name='fullName' />
-                                                <GlassInputNoButton placeholder='Email Address' value={email} onChange={onChange} error={errors.email} type={'email'} name='email' />
-                                                <GlassInputNoButton placeholder='Phone Number' value={phoneNumber} onChange={onChange} error={errors.phoneNumber} type={'tel'} name='phoneNumber' />
-                                                <SelectMenus placeholder='Service Category' value={serviceCategory} onChange={onChange} error={errors.serviceCategory} name='serviceCategory' />
-                                            </div>
-                                            <Button size='lg' type='submit' className='capitalize font-family bg-[#352866] my-3 w-full'>
-                                                {
-                                                    isLoading ? <Spiner /> : "Join Waitlist"
-                                                }
-                                            </Button>
-                                        </form>
 
-                                    </div>
+                <div className="md:grid md:grid-cols-2 lg:grid-cols-2 gap-10" id='contact'>
+                    <div className="mb-6 md:mb-0">
+                        <div className='my-10'>
+                            <h2 className="mb-6 text-2xl font-semibold text-white">Join waitlist</h2>
+                            <div className="glass p-5 items-center rounded-lg">
+                                <div className='w-full col-span-2'>
+                                    <h2 className='text-dark text-2xl'>Work with us</h2>
+                                    <p className='text-sm text-dark my-3'>Get early access and be the first to partner with us by creating a business account</p>
+                                    <form onSubmit={onSubmit}>
+                                        <div className='inputs'>
+                                            <GlassInputNoButton placeholder="Full Name" value={fullName} onChange={onChange} error={errors.fullName} type={'text'} name='fullName' />
+                                            <GlassInputNoButton placeholder='Email Address' value={email} onChange={onChange} error={errors.email} type={'email'} name='email' />
+                                            <GlassInputNoButton placeholder='Phone Number' value={phoneNumber} onChange={onChange} error={errors.phoneNumber} type={'tel'} name='phoneNumber' />
+                                            <SelectMenus placeholder='Service Category' value={serviceCategory} onChange={onChange} error={errors.serviceCategory} name='serviceCategory' />
+                                        </div>
+                                        <Button size='lg' type='submit' className='capitalize font-family bg-[#352866] my-3 w-full'>
+                                            {
+                                                isLoading ? <Spiner /> : "Join Waitlist"
+                                            }
+                                        </Button>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
-                    </ScrollAnimation>
+                    </div>
 
-                    <ScrollAnimation duration={2} animateIn="fadeInRight" animateOnce={true} initiallyVisible={true}>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-1 my-10">
-                            <div>
-                                <h2 className="mb-6 text-sm font-semibold text-white">Features</h2>
-                                <ul className="text-gray-500">
-                                    {
-                                        navigation[0].items.map((item, index) => (
-                                            <li key={index} className="mb-4">
-                                                <a href={item.path} className="text-gray-300 font-light hover:underline">{item.name}</a>
-                                            </li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 className="mb-6 text-sm font-semibold text-white">Legal</h2>
-                                <ul className="text-gray-500 font-medium">
-                                    <li className="mb-4">
-                                        <a href="#" className="text-gray-300 font-light hover:underline">Privacy Policy</a>
-                                    </li>
-                                    <li className="mb-4">
-                                        <a href="#" className="text-gray-300 font-light hover:underline">Terms &amp; Conditions</a>
-                                    </li>
-                                    <li className="mb-4">
-                                        <a href="#" className="text-gray-300 font-light hover:underline flex space-x-2 sm:mt-0">
-                                            <PhoneIcon className="h-5 w-5 text-gray-400" /> <span>(+234) 9056299369</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" className="text-gray-300 font-light hover:underline flex space-x-2 sm:mt-0">
-                                            <EnvelopeIcon className="h-5 w-5 text-gray-400" /> <span>contact@feteflex.com</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-1 my-10">
+                        <div>
+                            <h2 className="mb-6 text-sm font-semibold text-white">Features</h2>
+                            <ul className="text-gray-500">
+                                {
+                                    navigation[0].items.map((item, index) => (
+                                        <li key={index} className="mb-4">
+                                            <a href={item.path} className="text-gray-300 font-light hover:underline">{item.name}</a>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
                         </div>
-                    </ScrollAnimation>
+                        <div>
+                            <h2 className="mb-6 text-sm font-semibold text-white">Legal</h2>
+                            <ul className="text-gray-500 font-medium">
+                                <li className="mb-4">
+                                    <a href="#" className="text-gray-300 font-light hover:underline">Privacy Policy</a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="#" className="text-gray-300 font-light hover:underline">Terms &amp; Conditions</a>
+                                </li>
+                                <li className="mb-4">
+                                    <a href="#" className="text-gray-300 font-light hover:underline flex space-x-2 sm:mt-0">
+                                        <PhoneIcon className="h-5 w-5 text-gray-400" /> <span>(+234) 9056299369</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" className="text-gray-300 font-light hover:underline flex space-x-2 sm:mt-0">
+                                        <EnvelopeIcon className="h-5 w-5 text-gray-400" /> <span>contact@feteflex.com</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
 
                 </div>
@@ -159,7 +155,7 @@ const Footer = () => {
                     </span>
                     <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                         <a href="#" className="text-gray-500 hover:text-white">
-                            <FontAwesomeIcon icon={faTwitter} />
+                            <FontAwesomeIcon icon={faXTwitter} />
                         </a>
                         <a href="#" className="text-gray-500 hover:text-white">
                             <FontAwesomeIcon icon={faFacebook} />
