@@ -13,7 +13,7 @@ const GlassInput = () => {
                     placeholder="Enter your email"
                 />
                 <div className="flex items-center">
-                    <Button className='capitalize font-family bg-[#2A2346] py-4'>Join Waitlist</Button>
+                    <Button className='capitalize font-family bg-[#2A2346] py-4 px-4'>Join Waitlist</Button>
                 </div>
             </div>
         </div>

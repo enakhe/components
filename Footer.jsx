@@ -81,7 +81,7 @@ const Footer = () => {
     return (
 
         <footer className="bg-[#2A2346] mt-72 lg:mt-0">
-            <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div className="mx-auto w-full max-w-screen-xl p-6 py-6 lg:py-8">
 
                 <div className="md:grid md:grid-cols-2 lg:grid-cols-2 gap-10" id='contact'>
                     <div className="mb-6 md:mb-0">
