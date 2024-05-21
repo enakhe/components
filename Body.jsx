@@ -16,11 +16,11 @@ import image5 from '../assets/image5.png'
 import image6 from '../assets/image6.png'
 import image7 from '../assets/image7.png'
 
+import video from "../assets/mvp.mp4"
+
 import rec1 from '../assets/Rectangle-1.png'
 import rec2 from '../assets/Rectangle-2.png'
 import rec3 from '../assets/Rectangle-3.png'
-
-import video from '../assets/video.png'
 
 import iphone1 from '../assets/iPhone 13.png'
 import iphone2 from '../assets/iPhone 13-2.png'
@@ -49,8 +49,8 @@ const Body = () => {
         <Fragment>
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
             <div className='bg-[#f1eef7]'>
-                <div className="mx-auto max-w-3xl lg:max-w-7xl lg:pt-10">
-                    <div className="grid py-12 gap-5 sm:grid-cols-1 items-center lg:grid-cols-2 md:grid-cols-2">
+                <div className="mx-auto lg:max-w-7xl lg:pt-10">
+                    <div className="grid py-12 gap-5 sm:grid-cols-1 items-center lg:grid-cols-2 md:grid-cols-1 padding-utils">
                         <div className="grid lg:justify-items-center mt-6">
                             <div className='px-6 lg:px-0'>
                                 <h1 className="lg:text-4xl mt-5 text-align text-[#2A2346] tracking-tight text-4xl font-semibold animate-once animate-delay-300 animate__animated animate__zoomIn heading-text">
@@ -82,9 +82,8 @@ const Body = () => {
 
             <Fragment>
                 <div className="about">
-                    <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20'>
-                        <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-3">
-
+                    <div className='mx-auto max-w-3xl md:px-6 lg:px-0 lg:max-w-7xl mb-20'>
+                        <div className="grid gap-5 about sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-3">
                             <div className='col-span-2'>
                                 <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
                                     <h3 className='text-[#2A2346] text-3xl font-bold'>Our Mission</h3>
@@ -114,7 +113,7 @@ const Body = () => {
                     <div className='mx-auto max-w-3xl lg:max-w-7xl py-10'>
                         <h3 className='text-[#2A2346] text-3xl p-6 text-center font-bold'>One App That Gets It All Done</h3>
 
-                        <div className="">
+                        <div className="padding-utils">
                             <ScrollAnimation className='grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-3' duration={1} animateIn="fadeInUp" animateOnce={true}>
                                 <div className='bg-[#ffffff] w-full rounded-2xl'>
                                     <h3 className='text-2xl text-[#2A2346] font-bold p-6'>Where Party Is <br /> Made Flexible</h3>
@@ -138,10 +137,10 @@ const Body = () => {
 
             <Fragment>
                 <div className="bg-[#F8F8F8]">
-                    <h3 className='text-[#2A2346] text-3xl max-w-3xl lg:max-w-7xl pt-10 mx-auto font-bold px-6 lg:px-0'>Are You Planning an Event or Offering Event Services</h3>
+                    <h3 className='text-[#2A2346] text-3xl max-w-3xl lg:max-w-7xl pt-10 mx-auto font-bold px-6 padding-utils'>Are You Planning an Event or Offering Event Services</h3>
                     <div className='mx-auto max-w-3xl lg:max-w-7xl py-10'>
                         <div className='flex justify-center'>
-                            <div className="">
+                            <div className="padding-utils">
                                 <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true}>
 
                                     <div className='grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-0 lg:grid-cols-2'>
@@ -167,7 +166,7 @@ const Body = () => {
                                     </div>
 
                                     <div className='bg-[#ffffff] w-full rounded-2xl col-start-1 col-end-6'>
-                                        <div className='grid gap-5 mr-6 sm:grid-cols-1 items-end lg:grid-cols-3'>
+                                        <div className='grid gap-5 sm:grid-cols-1 items-end lg:grid-cols-3'>
                                             <div className='lg:col-span-2 my-5 px-6'>
                                                 <h3 className='text-2xl text-[#2A2346] font-bold'>From Intimate Gatherings to Grand Celebrations</h3>
                                                 <h2 className='text-lg text-[#8563A6] font-semibold'>Make Every Bookings With Confidence</h2>
@@ -176,8 +175,8 @@ const Body = () => {
                                                     Join Waitlist
                                                 </Button>
                                             </div>
-                                            <div className='lg:justify-items-end flex justify-items-center'>
-                                                <img src={iphone3} className='w-full flex mr-6 justify-items-center' />
+                                            <div className='mx-6 grid justify-items-center'>
+                                                <img src={iphone3} className='w-96 flex justify-items-center' />
                                             </div>
                                         </div>
                                     </div>
@@ -210,287 +209,70 @@ const Body = () => {
 
 
                     <div className='mx-auto lg:max-w-7xl p-6 my-20'>
-                        <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+                        <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
                             {features.map((feature) => (
                                 <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true} key={feature.name}>
-                                    <div className="feature-item position-relative animate-fade-up animate-once animate-delay-400 animate-alternate text-white overflow-hidden rounded-lg" id='feature'>
-                                        <div className='img-fluid h-80 bg-[#ffffff] w-full object-cover rounded-2xl' alt="Ticketing">
-                                            <div className='feature-overlay'>
-                                                <dt className="text-sm mt-5 font-semibold leading-7 text-white-900">
-                                                    <div className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#170C49]">
-                                                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                                                    </div>
-                                                </dt>
-                                                <dd className="mt-2 text-center text-lg p-5 leading-7 text-[#2A2346]">{feature.description}</dd>
+                                    <center>
+                                        <div className="grid justify-items-center animate-fade-up flex justify-center animate-once animate-delay-400 animate-alternate text-white">
+                                            <div className='img-fluid h-80 bg-[#ffffff] w-full object-cover rounded-2xl' alt="Ticketing">
+                                                <div className='feature-overlay'>
+                                                    <dt className="text-sm mt-5 font-semibold leading-7 text-white-900">
+                                                        <div className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#170C49]">
+                                                            <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                                                        </div>
+                                                    </dt>
+                                                    <dd className="mt-2 text-center text-lg p-5 leading-7 text-[#2A2346]">{feature.description}</dd>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                    </div>
+                                        </div>
+                                    </center>
                                 </ScrollAnimation>
                             ))}
                         </dl>
 
                         <Fragment>
-                            <div className='lg:mt-28 my-10 flex video justify-items-center'>
-                                <img src={video} className='lg:w-2/4 flex justify-items-center' alt="" />
-                            </div>
+                            <center>
+                                <div className='lg:mt-28 my-10 flex video justify-items-center'>
+                                    <video width="860" height="661" controls playsInline autoPlay={true} loop controlsList="nodownload">
+                                        <source src={video} type="video/mp4" />
+                                        <source src={video} type="video/ogg" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </center>
+                            
                         </Fragment>
                     </div>
                 </div>
 
-                <Fragment>
-                    <div className='bg-[#f1eef7] -z-50'>
-                        <div className="mx-auto max-w-3xl p-6 lg:max-w-7xl">
-                            <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                                <div>
-                                    <h3 className="text-[#2A2346] text-3xl mt-5 text-align font-bold animate-once animate-delay-300 animate__animated animate__zoomIn">
-                                        Got Any Question?</h3>
-                                    <p className="text-[#2A2346] text-lg py-5 text-dark animate-once animate-delay-400 animate__animated animate__zoomIn">Wandering what Feteflex got in store for you? what challenges its solving? or how it can improve your business to get more clients? the opportunities are endless </p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                    </div>
-                </Fragment>
-            </Fragment>
 
-
-
-            {/* <Fragment>
-                <div className="features" id='features'>
-                    <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20 lg:mb-40' id='organizer'>
-                        <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-2 md:grid-cols-2">
-                            <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                                <div className="grid animate-fade-up animate-once animate-delay-400 justify-items-center">
-                                    <img src={image2} className='w-full rounded-3xl' alt="Landing Image" />
-                                </div>
-                            </ScrollAnimation>
-
-                            <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                                <div className=''>
-                                    <h3 className='text-[#8563A6] text-3xl font-bold'>Features</h3>
-                                    <h5 className='text-[#2A2346] text-2xl my-5 font-semibold'>Event Planning made easy</h5>
-                                    <p className='leading-relaxed text-lg'>
-                                        Your ultimate solution for seamless event planning. With our innovative platform, booking event
-                                        services is a breeze. From finding the perfect venue to securing talented professionals,
-                                        we simplify the process, ensuring your event is a resounding success.
-                                        Say goodbye to stress and hello to effortless event planning with Feteflex.
-                                    </p>
-
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                    </div>
-                </div>
             </Fragment>
 
             <Fragment>
-                <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20 lg:mb-40'>
-                    <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-2 md:grid-cols-2">
+                <div className='bg-[#f1eef7]'>
+                    <div className="mx-auto max-w-3xl p-6 lg:max-w-7xl">
                         <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                            <div className="grid animate-fade-up animate-once animate-delay-400 justify-items-center lg:order-last">
-                                <img src={image3} className='w-full' alt="Landing Image" />
-                            </div>
-                        </ScrollAnimation>
-
-
-                        <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                            <div className=''>
-                                <ScrollAnimation duration={2000} animateIn="bounce">
-                                    <p className='leading-relaxed text-lg'>
-                                        We are dedicated to curating a seamless event experience that prioritizes convenience and satisfaction.
-                                        Our platform boasts an array of sophisticated features designed to enhance every aspect of event management and participation.
-                                        Our user-friendly interface ensures effortless booking, allowing attendees to secure their spots with just a few clicks.
-                                        With instant updates, participants stay informed about event details, schedule changes, and important announcements in real-time, guaranteeing a smooth and stress-free experience.
-                                    </p>
-                                </ScrollAnimation>
-
-                            </div>
-                        </ScrollAnimation>
-
-                    </div>
-                </div>
-            </Fragment>
-
-            <Fragment>
-                <div className="features" id='features'>
-                    <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20 lg:mb-40' id='organizer'>
-                        <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-2 md:grid-cols-2">
-                            <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                                <div className="grid animate-fade-up animate-once animate-delay-400 justify-items-center">
-                                    <img src={image2} className='w-full rounded-3xl' alt="Landing Image" />
-                                </div>
-                            </ScrollAnimation>
-
-                            <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                                <div className=''>
-                                    <h3 className='text-[#8563A6] text-3xl font-bold'>Features</h3>
-                                    <h5 className='text-[#2A2346] text-2xl my-5 font-semibold'>Event Planning made easy</h5>
-                                    <p className='leading-relaxed text-lg'>
-                                        Your ultimate solution for seamless event planning. With our innovative platform, booking event
-                                        services is a breeze. From finding the perfect venue to securing talented professionals,
-                                        we simplify the process, ensuring your event is a resounding success.
-                                        Say goodbye to stress and hello to effortless event planning with Feteflex.
-                                    </p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                    </div>
-                </div>
-            </Fragment>
-
-            <Fragment>
-                <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20 lg:mb-40'>
-                    <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-2 md:grid-cols-2">
-                        <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                            <div className="grid animate-fade-up animate-once animate-delay-400 justify-items-center lg:order-last">
-                                <img src={image3} className='w-full' alt="Landing Image" />
-                            </div>
-                        </ScrollAnimation>
-
-
-                        <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                            <div className=''>
-                                <ScrollAnimation duration={2000} animateIn="bounce">
-                                    <p className='leading-relaxed text-lg'>
-                                        We are dedicated to curating a seamless event experience that prioritizes convenience and satisfaction.
-                                        Our platform boasts an array of sophisticated features designed to enhance every aspect of event management and participation.
-                                        Our user-friendly interface ensures effortless booking, allowing attendees to secure their spots with just a few clicks.
-                                        With instant updates, participants stay informed about event details, schedule changes, and important announcements in real-time, guaranteeing a smooth and stress-free experience.
-                                    </p>
-                                </ScrollAnimation>
-
-                            </div>
-                        </ScrollAnimation>
-
-                    </div>
-                </div>
-            </Fragment>
-
-            <Fragment>
-                <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20 lg:mb-40' id='artist'>
-                    <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-2 md:grid-cols-2">
-                        <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                            <div className="grid animate-fade-up animate-once animate-delay-400 justify-items-center">
-                                <img src={image4} className='w-96' alt="Landing Image" />
-                            </div>
-                        </ScrollAnimation>
-
-
-                        <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                            <div className=''>
-                                <h5 className='text-[#2A2346] text-2xl my-5 font-semibold'>Elevate Your Event. Make it unforgettable
-                                    with Artistes like no other</h5>
-                                <p className='leading-relaxed text-lg'>
-                                    We are dedicated to curating a seamless event experience that prioritizes convenience and satisfaction.
-                                    Our platform boasts an array of sophisticated features designed to enhance every aspect of event management and participation.
-
-                                    Our user-friendly interface ensures effortless booking, allowing attendees to secure their spots with just a few clicks.
-                                    With instant updates, participants stay informed about event details, schedule changes, and important announcements in real-time, guaranteeing a smooth and stress-free experience.
-                                </p>
-                            </div>
-                        </ScrollAnimation>
-
-                    </div>
-                </div>
-            </Fragment>
-
-            <Fragment>
-                <div className='mx-auto max-w-3xl lg:max-w-7xl mb-20 lg:mb-40' id='venue'>
-                    <div className="grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-2 md:grid-cols-2">
-                        <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                            <div className="grid animate-fade-up animate-once animate-delay-400 justify-items-center lg:order-last">
-                                <img src={image5} className='w-96' alt="Landing Image" />
-                            </div>
-                        </ScrollAnimation>
-
-                        <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                            <div className=''>
-                                <h5 className='text-[#2A2346 text-2xl my-5 font-semibold'>Discover and book top class venues around the
-                                    globe with just a few clicks!</h5>
-                                <p className='leading-relaxed text-lg'>
-                                    Venue search made easy!  Find the ideal space, compare quotes, and secure
-                                    your date with ease. Users can browse through a diverse range of options,
-                                    check availability in real-time, and confirm bookings with confidence,
-                                    minimizing the risks associated with unreliable commitments.
-                                </p>
-                                <Button className='my-5 capitalize font-family bg-[#2A2346]'>Join Waitlist</Button>
+                            <div>
+                                <h3 className="text-[#2A2346] text-3xl mt-5 text-align font-bold animate-once animate-delay-300 animate__animated animate__zoomIn">
+                                    Got Any Question?</h3>
+                                <p className="text-[#2A2346] text-lg py-5 text-dark animate-once animate-delay-400 animate__animated animate__zoomIn">Wandering what Feteflex got in store for you? what challenges its solving? or how it can improve your business to get more clients? the opportunities are endless </p>
                             </div>
                         </ScrollAnimation>
                     </div>
-                </div>
-                <div className='relative'>
-                    <img src={item3} alt='Item 1' className='absolute bottom-20 left-0 w-24' />
-                </div>
-            </Fragment>
 
-            
+                    <div className='lg:pl-20 pl-5 mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible flex'>
 
-            <Fragment>
-                <div className='group2'>
-                    <div className='mx-auto max-w-3xl lg:max-w-7xl mt-40 p-6'>
-                        <h3 className='text-[#8563A6] text-3xl font-bold'>One app that gets it all done</h3>
-                        <h5 className='text-[#2A2346] text-lg lg:text-2xl my-5 font-semibold'>The best and number one reliable platform for booking
-                            and marketing your event services.</h5>
-                        <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
-                            {features.map((feature) => (
-                                <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true} key={feature.name}>
-                                    <div className="feature-item position-relative animate-fade-up animate-once animate-delay-400 animate-alternate text-white overflow-hidden rounded-lg" id='feature'>
-                                        <img className='img-fluid h-80 w-full object-cover' src={feature.image} alt="Ticketing" />
-                                        <div className='feature-overlay'>
-                                            <dt className="text-sm mt-5 font-semibold leading-7 text-white-900">
-                                                <div className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#170C49]">
-                                                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                                                </div>
-                                                <div className='text-center'>
-                                                    {feature.name}
-                                                </div>
-                                            </dt>
-                                            <dd className="mt-2 font-light text-center text-sm p-5 leading-7 text-dark-600">{feature.description}</dd>
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                            ))}
-                        </dl>
-                        <h3 className='text-center my-10'>Crafting Memories: One <span className='text-[#C493C1]'>Event at a</span> Time!</h3>
                     </div>
                 </div>
+
 
             </Fragment>
-
-            
-
-            <Fragment>
-                <div className='group5'>
-                    <div className='flex items-center justify-center my-20'>
-                        <div className='max-w-2xl'>
-                            <div className=" bg-[#2A2346] p-10 items-center grid lg:grid-cols-3 grid-cols-1 gap-20 lg:rounded-lg relative">
-
-                                <div className='w-full max-w-96 col-span-2'>
-                                    <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
-                                        <h2 className='text-white text-2xl'>Your All-In-One Booking App</h2>
-                                        <p className='text-sm text-white my-5'>Coming soon with awesome features that <br />
-                                            will blow your mind follow us on all our social
-                                            media platforms, to get the latest updates from us</p>
-                                    </ScrollAnimation>
-                                </div>
-
-                                <div className='absolute bottom-0 lg:top-0 top-52 right-10'>
-                                    <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
-                                        <img src={image7} className=' w-40' alt="Landing Image" />
-                                    </ScrollAnimation>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </Fragment> */}
 
             <Fragment>
                 <Footer />
             </Fragment>
-
-        </Fragment >
+        </Fragment>
     )
 }
 
