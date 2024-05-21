@@ -90,11 +90,7 @@ const Body = () => {
                                     <p className='text-lg text-[#2A2346] leading-relaxed mt-5 max-w-2xl'>
                                         At Feteflex, we’re committed to redefining event planning with creativity and innovative technology through a unified platform.</p>
                                     <p className='my-2 max-w-2xl text-lg leading-relaxed text-[#2A2346]'>Imagine a platform where you can easily find the perfect venue, caterer, entertainment, and more, all at your fingertips<span className='lg:hidden'>...</span>.</p>
-                                    <p className='my-2 max-w-2xl text-lg leading-relaxed text-[#2A2346] hidden lg:block'>Organizing events has never been easy and that is why we aim to simplify that process, providing a dedicated space for effective service marketing.</p>
-                                    <div className='inline-flex items-center lg:hidden'>
-                                        <h5 className='my-5 capitalize font-family text-lg leading-relaxed text-[#8563A6]'>Read more </h5>
-                                        <ChevronDoubleRightIcon className="h-5 w-5 ml-3 text-[#8563A6]" />
-                                    </div>
+                                    <p className='my-2 max-w-2xl text-lg leading-relaxed text-[#2A2346]'>Organizing events has never been easy and that is why we aim to simplify that process, providing a dedicated space for effective service marketing.</p>
                                 </ScrollAnimation>
 
                             </div>
@@ -194,7 +190,7 @@ const Body = () => {
                         <p className='lg:max-w-xl text-center text-[#2A2346] text-md p-6 text-lg leading-relaxed'>Whether you&apos;re organizing a wedding, concert, birthday party, corporate event, or beach party, our platform has everything you need to ensure seamless experiences for you.</p>
                     </div>
 
-                    <ScrollAnimation duration={1} animateIn="fadeInRight" animateOnce={true}>
+                    <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true}>
                         <div className='lg:pl-20 pl-5 mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible flex phones'>
                             <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
                             <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
@@ -241,7 +237,7 @@ const Body = () => {
                                     </video>
                                 </div>
                             </center>
-                            
+
                         </Fragment>
                     </div>
                 </div>
