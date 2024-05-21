@@ -4,7 +4,7 @@ const GlassInput = () => {
 
     return (
         <div className='animate-once animate-delay-400 animate__animated animate__fadeInUp'>
-            <div className="mt-2 rounded-md shadow-sm flex lg:mr-10">
+            <div className="mt-2 rounded-md flex lg:mr-10">
                 <input
                     type="text"
                     name="price"

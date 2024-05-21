@@ -1,8 +1,8 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import GlassInput from './GlassInput'
 import AvatarStack from './AvatarStack'
 // import { ChevronDoubleRightIcon } from '@heroicons/react/20/solid'
-import { Button } from '@material-tailwind/react'
+import { Button, Tab, TabPanel, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { motion, useScroll } from "framer-motion"
 
 import landingImage from './../assets/landing.png'
@@ -35,7 +35,7 @@ import phone6 from '../assets/phone6.png'
 import phone7 from '../assets/phone7.png'
 
 
-import { features } from '../app/objects'
+import { data, features } from '../app/objects'
 import Footer from './Footer'
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -44,6 +44,7 @@ import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
 
 const Body = () => {
     const { scrollYProgress } = useScroll();
+    const [activeTab, setActiveTab] = useState("benefits");
 
     return (
         <Fragment>
@@ -82,8 +83,8 @@ const Body = () => {
 
             <Fragment>
                 <div className="about">
-                    <div className='mx-auto max-w-3xl md:px-6 lg:px-0 lg:max-w-7xl mb-20'>
-                        <div className="grid gap-5 about sm:grid-cols-1 items-center p-6 lg:px-2 lg:grid-cols-3">
+                    <div className='mx-auto md:px-6 lg:px-0 lg:max-w-7xl mb-20'>
+                        <div className="grid gap-5 about sm:grid-cols-1 items-center padding-utils p-6 lg:grid-cols-3">
                             <div className='col-span-2'>
                                 <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
                                     <h3 className='text-[#2A2346] text-3xl font-bold'>Our Mission</h3>
@@ -141,7 +142,7 @@ const Body = () => {
 
                                     <div className='grid gap-5 sm:grid-cols-1 items-center p-6 lg:px-0 lg:grid-cols-2'>
                                         <div className='bg-[#ffffff] rounded-2xl'>
-                                            <h3 className='text-3xl text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Your Events</h3>
+                                            <h3 className='text-2xl text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Your Events</h3>
                                             <div className='grid gap-5 sm:grid-cols-1 items-center lg:grid-cols-2'>
                                                 <p className='px-6 mt-2 text-[#2A2346] text-lg leading-relaxed'>Browse through a diverse range of options, by location, vendor type, budget to find exactly what they need.</p>
                                                 <div className='justify-items-end mt-6 px-6'>
@@ -151,7 +152,7 @@ const Body = () => {
                                         </div>
 
                                         <div className='bg-[#ffffff] rounded-2xl'>
-                                            <h3 className='text-3xl text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Service Providers</h3>
+                                            <h3 className='text-2xl text-[#2A2346] font-bold pt-6 px-6'>Feteflex For Service Providers</h3>
                                             <div className='grid gap-5 sm:grid-cols-1 items-center lg:grid-cols-2'>
                                                 <p className='px-6 mt-2 text-[#2A2346] text-lg leading-relaxed'>Event service providers now have the chance to showcase their unique offerings, and attract more clients</p>
                                                 <div className='justify-items-end mt-6 px-6'>
@@ -191,7 +192,7 @@ const Body = () => {
                     </div>
 
                     <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true}>
-                        <div className='lg:pl-20 pl-5 mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible flex phones'>
+                        <div className='lg:pl-20 pl-5 padding-utils mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible flex phones'>
                             <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
                             <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
                             <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
@@ -203,7 +204,7 @@ const Body = () => {
                     </ScrollAnimation>
 
                     <div className='mx-auto lg:max-w-7xl p-6 pt-20'>
-                        <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+                        <dl className="grid grid-cols-1 gap-x-8 gap-y-10 padding-utils lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
                             {features.map((feature) => (
                                 <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true} key={feature.name}>
                                     <center>
@@ -228,7 +229,7 @@ const Body = () => {
                         <Fragment>
                             <center>
                                 <div className='lg:mt-28 my-10 flex video justify-items-center'>
-                                    <video width="860" height="661" controls playsInline autoPlay={true} loop controlsList="nodownload">
+                                    <video width="860" height="661" controls={false} playsInline autoPlay={true} loop controlsList="nodownload">
                                         <source src={video} type="video/mp4" />
                                         <source src={video} type="video/ogg" />
                                         Your browser does not support the video tag.
@@ -243,7 +244,7 @@ const Body = () => {
 
             <Fragment>
                 <div className='bg-[#f1eef7]'>
-                    <div className="mx-auto max-w-3xl p-6 lg:max-w-7xl">
+                    <div className="mx-auto max-w-3xl p-6 lg:max-w-7xl padding-utils">
                         <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
                             <div>
                                 <h3 className="text-[#2A2346] text-3xl mt-5 text-align font-bold animate-once animate-delay-300 animate__animated animate__zoomIn">
@@ -251,11 +252,36 @@ const Body = () => {
                                 <p className="text-[#2A2346] text-lg py-5 text-dark animate-once animate-delay-400 animate__animated animate__zoomIn">Wandering what Feteflex got in store for you? what challenges its solving? or how it can improve your business to get more clients? the opportunities are endless </p>
                             </div>
                         </ScrollAnimation>
+
+                        <Tabs value="html" orientation="vertical" value={activeTab}>
+                            <TabsHeader
+                                fullWidth
+                                className="rounded-none text-start text-[#F1EEF7] text-sm bg-transparent p-0"
+                                indicatorProps={{
+                                    className:
+                                        "!text-inherit font-family text-start text-sm w-96 capitalize bg-[#2A2346] text-[#F1EEF7]",
+                                }}>
+                                {data.map(({ label, value }) => (
+                                    <Tab
+                                        key={value}
+                                        value={value}
+                                        onClick={() => setActiveTab(value)}
+                                        className={activeTab === value ? "justify-start text-left text-[#F1EEF7] text-sm w-96 py-4 px-4" : "justify-start text-left text-sm my-3 bg-[#e7e4ee] py-4 px-4 rounded"}>
+                                        {label}
+                                    </Tab>
+                                ))}
+                            </TabsHeader>
+                            <TabsBody>
+                                {data.map(({ value, desc }) => (
+                                    <TabPanel className='font-family' key={value} value={value}>
+                                        {desc}
+                                    </TabPanel>
+                                ))}
+                            </TabsBody>
+                        </Tabs>
                     </div>
 
-                    <div className='lg:pl-20 pl-5 mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible flex'>
 
-                    </div>
                 </div>
 
 
