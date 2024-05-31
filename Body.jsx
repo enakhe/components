@@ -188,14 +188,24 @@ const Body = () => {
                     </div>
 
                     <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true}>
-                        <div className='lg:pl-20 pl-5 padding-utils mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible flex phones'>
-                            <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                            <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                            <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                            <img src={phone4} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                            <img src={phone5} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                            <img src={phone6} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                            <img src={phone7} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                        <div className='lg:pl-20 pl-5 padding-utils mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible'>
+                            <div className="phones flex">
+                                <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                                <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                                <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                                <img src={phone4} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                                <img src={phone5} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                                <img src={phone6} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                                <img src={phone7} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+
+                                <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                                <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                                <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                                <img src={phone4} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                                <img src={phone5} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                                <img src={phone6} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                                <img src={phone7} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                            </div>
                         </div>
                     </ScrollAnimation>
 
