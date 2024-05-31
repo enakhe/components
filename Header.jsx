@@ -3,16 +3,19 @@ import { Fragment, useState } from 'react'
 import { navigation } from '../app/objects'
 import Dropdown from './Dropdown'
 import { Dialog } from '@headlessui/react';
-import { Button } from '@material-tailwind/react'
+import { Button, Dialog as Dialog2 } from '@material-tailwind/react'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 import logo from './../assets/header-logo.png'
 
 import subBlack from './../assets/logo-black.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXTwitter, faFacebook, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import WaitList from './WaitList';
 
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+	const [open, setOpen] = useState(false);
+	const handleOpen = () => setOpen((cur) => !cur);
 
 	return (
 		<header className="relative z-50 inset-x-0 header-bg">
@@ -45,16 +48,14 @@ const Header = () => {
 							))}
 						</div>
 						<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-							<a href='#contact'>
-								<Button variant="gradient" color="white" className='font-family w-full capitalize bg-[#2A2346] py-4 text-[#F1EEF7]'>
-									Get Started
-								</Button>
-							</a>
+							<Button variant="gradient" color="white" className='font-family capitalize bg-[#2A2346] py-4 text-[#F1EEF7]' onClick={handleOpen}>
+								Get Started
+							</Button>
 						</div>
 					</div>
-					
+
 				</div>
-				
+
 			</nav>
 			<Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
 				<div className="fixed inset-0 z-50" />
@@ -92,7 +93,7 @@ const Header = () => {
 						</div>
 					</div>
 					<div className='absolute inset-x-0 bottom-0 py-6 px-6'>
-						<Button size='lg' className='font-family capitalize w-full bg-[#2A2346] py-4 text-[#F1EEF7]'>Join Waitlist</Button>
+						<Button size='lg' className='font-family capitalize w-full bg-[#2A2346] py-4 text-[#F1EEF7]' onClick={handleOpen}>Join Waitlist</Button>
 						<hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
 						<div className="sm:flex sm:items-center sm:justify-between" id='social-media'>
 							<span className="text-sm text-gray-900 sm:text-center">© 2024 <a href="https://flowbite.com/" className="hover:underline">Feteflex™</a>. All Rights Reserved
@@ -120,6 +121,15 @@ const Header = () => {
 
 				</Dialog.Panel>
 			</Dialog>
+
+			<Dialog2
+				size="xs"
+				open={open}
+				onClose={open}
+				handler={handleOpen}
+				className="bg-transparent shadow-none">
+				<WaitList onClick={handleOpen} />
+			</Dialog2>
 		</header>
 
 	)

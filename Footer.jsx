@@ -1,4 +1,3 @@
-import whiteLogo from '../assets/header-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXTwitter, faFacebook, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { navigation } from '../app/objects';
@@ -10,8 +9,6 @@ import Spiner from '../components/Spiner'
 import SelectMenus from './SelectMenus';
 import { toast } from "react-toastify";
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
-
-import ScrollAnimation from 'react-animate-on-scroll';
 import { useEffect, useState } from 'react';
 import { addWaitList, reset } from '../features/waitList/waitListSlice';
 

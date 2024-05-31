@@ -2,19 +2,12 @@ import { Fragment, useState } from 'react'
 import GlassInput from './GlassInput'
 import AvatarStack from './AvatarStack'
 // import { ChevronDoubleRightIcon } from '@heroicons/react/20/solid'
-import { Accordion, Button, Tab, TabPanel, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
+import { Button, Dialog, Tab, TabPanel, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { motion, useScroll } from "framer-motion"
 
 import landingImage from './../assets/landing.png'
 import curve from './../assets/curve.png'
-import item3 from './../assets/item3.png'
 import logoMulti from '../assets/logo-multi.png'
-import image2 from '../assets/image2.png'
-import image3 from '../assets/image3.png'
-import image4 from '../assets/image4.png'
-import image5 from '../assets/image5.png'
-import image6 from '../assets/image6.png'
-import image7 from '../assets/image7.png'
 
 import video from "../assets/mvp.mp4"
 
@@ -40,12 +33,14 @@ import Footer from './Footer'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import 'animate.css';
-import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
 import AccordionComp from './AccordionComp'
+import WaitList from './WaitList'
 
 const Body = () => {
     const { scrollYProgress } = useScroll();
     const [activeTab, setActiveTab] = useState("benefits");
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen((cur) => !cur);
 
     return (
         <Fragment>
@@ -65,7 +60,7 @@ const Body = () => {
                                     <GlassInput />
                                 </div>
                                 <div className='lg:hidden'>
-                                    <Button variant="gradient" color="white" className='font-family w-48 text-md capitalize bg-[#2A2346] text-[#F1EEF7]'>
+                                    <Button variant="gradient" color="white" className='font-family w-48 text-md capitalize bg-[#2A2346] text-[#F1EEF7]' onClick={handleOpen}>
                                         Join Waitlist
                                     </Button>
                                 </div>
@@ -169,7 +164,7 @@ const Body = () => {
                                                 <h3 className='text-2xl text-[#2A2346] font-bold'>From Intimate Gatherings to Grand Celebrations</h3>
                                                 <h2 className='text-lg text-[#8563A6] font-semibold'>Make Every Bookings With Confidence</h2>
                                                 <p className='w-full text-[#2A2346] max-w-lg my-4 text-lg leading-relaxed'>Our escrow payment system ensures that funds are held securely until services are successfully delivered, providing peace of mind and mitigating financial disputes for you and your client.</p>
-                                                <Button variant="gradient" color="white" className='font-family text-md w-48 capitalize bg-[#2A2346] text-[#F1EEF7]'>
+                                                <Button variant="gradient" color="white" className='font-family text-md w-48 capitalize bg-[#2A2346] text-[#F1EEF7]' onClick={handleOpen}>
                                                     Join Waitlist
                                                 </Button>
                                             </div>
@@ -300,6 +295,15 @@ const Body = () => {
 
 
             </Fragment>
+
+            <Dialog
+                size="xs"
+                open={open}
+                onClose={open}
+                handler={handleOpen}
+                className="bg-transparent shadow-none">
+                <WaitList onClick={handleOpen} />
+            </Dialog>
 
             <Fragment>
                 <Footer />
