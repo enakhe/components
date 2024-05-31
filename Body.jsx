@@ -27,6 +27,7 @@ import phone5 from '../assets/phone5.png'
 import phone6 from '../assets/phone6.png'
 import phone7 from '../assets/phone7.png'
 
+import mainLogo from '../assets/mainLogo.png'
 
 import { data, features } from '../app/objects'
 import Footer from './Footer'
@@ -314,6 +315,8 @@ const Body = () => {
                 className="bg-transparent shadow-none">
                 <WaitList onClick={handleOpen} />
             </Dialog>
+
+            <img src={mainLogo} alt="" className='hidden' />
 
             <Fragment>
                 <Footer />
