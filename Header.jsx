@@ -92,7 +92,7 @@ const Header = () => {
 						</div>
 					</div>
 					<div className='absolute inset-x-0 bottom-0 py-6 px-6'>
-						<Button size='lg' className='font-family capitalize bg-[#2A2346] py-4 text-[#F1EEF7]'>Join Waitlist</Button>
+						<Button size='lg' className='font-family capitalize w-full bg-[#2A2346] py-4 text-[#F1EEF7]'>Join Waitlist</Button>
 						<hr className="my-6 border-gray-700 sm:mx-auto lg:my-8" />
 						<div className="sm:flex sm:items-center sm:justify-between" id='social-media'>
 							<span className="text-sm text-gray-900 sm:text-center">© 2024 <a href="https://flowbite.com/" className="hover:underline">Feteflex™</a>. All Rights Reserved

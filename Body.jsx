@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import GlassInput from './GlassInput'
 import AvatarStack from './AvatarStack'
 // import { ChevronDoubleRightIcon } from '@heroicons/react/20/solid'
-import { Button, Tab, TabPanel, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
+import { Accordion, Button, Tab, TabPanel, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { motion, useScroll } from "framer-motion"
 
 import landingImage from './../assets/landing.png'
@@ -41,6 +41,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import 'animate.css';
 import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid'
+import AccordionComp from './AccordionComp'
 
 const Body = () => {
     const { scrollYProgress } = useScroll();
@@ -253,32 +254,45 @@ const Body = () => {
                             </div>
                         </ScrollAnimation>
 
-                        <Tabs value="html" orientation="vertical" value={activeTab}>
-                            <TabsHeader
-                                fullWidth
-                                className="rounded-none text-start text-[#F1EEF7] text-sm bg-transparent p-0"
-                                indicatorProps={{
-                                    className:
-                                        "!text-inherit font-family text-start text-sm w-96 capitalize bg-[#2A2346] text-[#F1EEF7]",
-                                }}>
-                                {data.map(({ label, value }) => (
-                                    <Tab
-                                        key={value}
-                                        value={value}
-                                        onClick={() => setActiveTab(value)}
-                                        className={activeTab === value ? "justify-start text-left text-[#F1EEF7] text-sm w-96 py-4 px-4" : "justify-start text-left text-sm my-3 bg-[#e7e4ee] py-4 px-4 rounded"}>
-                                        {label}
-                                    </Tab>
-                                ))}
-                            </TabsHeader>
-                            <TabsBody>
-                                {data.map(({ value, desc }) => (
-                                    <TabPanel className='font-family' key={value} value={value}>
-                                        {desc}
-                                    </TabPanel>
-                                ))}
-                            </TabsBody>
-                        </Tabs>
+                        <div className="hidden lg:block">
+                            <Tabs orientation="vertical" value={activeTab}>
+                                <TabsHeader
+                                    fullwidth={"true"}
+                                    className="rounded-none text-start text-[#F1EEF7] text-sm bg-transparent p-0"
+                                    indicatorProps={{
+                                        className:
+                                            "!text-inherit font-family text-start text-sm w-96 capitalize bg-[#2A2346] text-[#F1EEF7]",
+                                    }}>
+                                    {data.map(({ label, value }) => (
+                                        <Tab
+                                            key={value}
+                                            value={value}
+                                            onClick={() => setActiveTab(value)}
+                                            className={activeTab === value ? "justify-start text-left text-[#F1EEF7] text-sm w-96 py-4 px-4" : "justify-start text-left text-sm my-3 bg-[#e7e4ee] py-4 px-4 rounded"}>
+                                            {label}
+                                        </Tab>
+                                    ))}
+                                </TabsHeader>
+                                <TabsBody>
+                                    {data.map(({ value, desc }) => (
+                                        <TabPanel className='font-family' key={value} value={value}>
+                                            {desc.map((des, index) => (
+                                                <p key={index} className='my-3'>{des}</p>
+                                            ))}
+                                        </TabPanel>
+                                    ))}
+                                </TabsBody>
+                            </Tabs>
+                        </div>
+
+                        <div className='lg:hidden my-28'>
+                            {
+                                data.map((data, index) => (
+                                    <AccordionComp key={index} header={data.label} body={data.desc} />
+                                ))
+                            }
+                        </div>
+
                     </div>
 
 
