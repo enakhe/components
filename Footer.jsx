@@ -95,7 +95,7 @@ const Footer = () => {
                                             <GlassInputNoButton placeholder='Phone Number' value={phoneNumber} onChange={onChange} error={errors.phoneNumber} type={'tel'} name='phoneNumber' />
                                             <SelectMenus placeholder='Service Category' value={serviceCategory} onChange={onChange} error={errors.serviceCategory} name='serviceCategory' />
                                         </div>
-                                        <Button size='lg' type='submit' className='capitalize font-family bg-[#352866] my-3 w-full'>
+                                        <Button size='lg' type='submit' className='capitalize font-family bg-[#2a2346] my-3 w-full'>
                                             {
                                                 isLoading ? <Spiner /> : "Join Waitlist"
                                             }

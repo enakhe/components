@@ -80,8 +80,8 @@ const Body = () => {
 
             <Fragment>
                 <div className="about">
-                    <div className='mx-auto md:px-6 lg:px-0 lg:max-w-7xl mb-20'>
-                        <div className="grid gap-5 about sm:grid-cols-1 items-center padding-utils p-6 lg:grid-cols-3">
+                    <div className='mx-auto lg:px-0 lg:max-w-7xl mb-20'>
+                        <div className="grid gap-5 sm:grid-cols-1 items-center my-6 lg:grid-cols-3">
                             <div className='col-span-2'>
                                 <ScrollAnimation duration={1} animateIn="fadeInLeft" animateOnce={true}>
                                     <h3 className='text-[#2A2346] text-3xl font-bold'>Our Mission</h3>
@@ -188,27 +188,25 @@ const Body = () => {
                         <p className='lg:max-w-xl text-center text-[#2A2346] text-md p-6 text-lg leading-relaxed'>Whether you&apos;re organizing a wedding, concert, birthday party, corporate event, or beach party, our platform has everything you need to ensure seamless experiences for you.</p>
                     </div>
 
-                    <ScrollAnimation duration={1} animateIn="fadeInUp" animateOnce={true}>
-                        <div className='lg:pl-20 pl-5 padding-utils mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible'>
-                            <div className="phones flex">
-                                <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                                <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                                <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                                <img src={phone4} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                                <img src={phone5} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                                <img src={phone6} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                                <img src={phone7} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                    <div className='lg:pl-20 pl-5 padding-utils mt-10 no-scrollbar scroll-smooth overflow-x-auto overflow-visible'>
+                        <div className="phones flex">
+                            <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone4} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone5} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone6} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone7} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
 
-                                <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                                <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                                <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                                <img src={phone4} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                                <img src={phone5} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                                <img src={phone6} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
-                                <img src={phone7} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
-                            </div>
+                            <img src={phone1} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone2} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone3} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone4} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone5} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
+                            <img src={phone6} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mb-20' />
+                            <img src={phone7} alt="" className='w-48 lg:w-64 lg:mr-20 mr-10 mt-20' />
                         </div>
-                    </ScrollAnimation>
+                    </div>
 
                     <div className='mx-auto lg:max-w-7xl p-6 pt-20'>
                         <dl className="grid grid-cols-1 gap-x-8 gap-y-10 padding-utils lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
@@ -236,7 +234,7 @@ const Body = () => {
                         <Fragment>
                             <center>
                                 <div className='lg:mt-28 my-10 flex video justify-items-center'>
-                                    <video width="860" height="661" controls={false} playsInline autoPlay={true} loop controlsList="nodownload">
+                                    <video width="860" height="661" controls={false} playsInline autoPlay loop controlsList="nodownload">
                                         <source src={video} type="video/mp4" />
                                         <source src={video} type="video/ogg" />
                                         Your browser does not support the video tag.
@@ -262,49 +260,49 @@ const Body = () => {
 
                         <div className="hidden lg:block">
                             <Tabs orientation="vertical" value={activeTab}>
-                                <TabsHeader
-                                    fullwidth={"true"}
-                                    className="rounded-none text-start text-[#F1EEF7] text-sm bg-transparent p-0"
-                                    indicatorProps={{
-                                        className:
-                                            "!text-inherit font-family text-start text-sm w-96 capitalize bg-[#2A2346] text-[#F1EEF7]",
-                                    }}>
-                                    {data.map(({ label, value }) => (
-                                        <Tab
-                                            key={value}
-                                            value={value}
-                                            onClick={() => setActiveTab(value)}
-                                            className={activeTab === value ? "justify-start text-left text-[#F1EEF7] text-sm w-96 py-4 px-4" : "justify-start text-left text-sm my-3 bg-[#e7e4ee] py-4 px-4 rounded"}>
-                                            {label}
-                                        </Tab>
-                                    ))}
-                                </TabsHeader>
-                                <TabsBody>
-                                    {data.map(({ value, desc }) => (
-                                        <TabPanel className='font-family' key={value} value={value}>
-                                            {desc.map((des, index) => (
-                                                <p key={index} className='my-3'>{des}</p>
-                                            ))}
-                                        </TabPanel>
-                                    ))}
-                                </TabsBody>
+                                <div className='flex items-center'>
+                                    <TabsHeader
+                                        fullwidth={"true"}
+                                        className="rounded-none text-start text-[#F1EEF7] text-sm bg-transparent p-0 mr-16"
+                                        indicatorProps={{
+                                            className:
+                                                "!text-inherit font-family text-start text-sm w-96 capitalize bg-[#2A2346] text-[#F1EEF7]",
+                                        }}>
+                                        {data.map(({ label, value }) => (
+                                            <Tab
+                                                key={value}
+                                                value={value}
+                                                onClick={() => setActiveTab(value)}
+                                                className={activeTab === value ? "justify-start text-left text-[#F1EEF7] text-sm w-96 py-4 px-4" : "justify-start text-left text-sm my-3 bg-[#e7e4ee] py-4 px-4 rounded"}>
+                                                {label}
+                                            </Tab>
+                                        ))}
+                                    </TabsHeader>
+                                    <TabsBody className='h-mine overflow-auto bg-[#e7e4ee] rounded-md'>
+                                        {data.map(({ value, desc }) => (
+                                            desc.map((des, index) => (
+                                                <TabPanel className='font-family leading text-semibold' key={value} value={value}>
+                                                    <p key={index} className='my-3 hidden lg:block'>{des}</p>
+                                                </TabPanel>
+                                            ))
+                                        ))
+                                        }
+
+                                    </TabsBody>
+                                </div>
+
                             </Tabs>
                         </div>
 
-                        <div className='lg:hidden my-28'>
+                        <div className='lg:hidden'>
                             {
                                 data.map((data, index) => (
                                     <AccordionComp key={index} header={data.label} body={data.desc} />
                                 ))
                             }
                         </div>
-
                     </div>
-
-
                 </div>
-
-
             </Fragment>
 
             <Dialog

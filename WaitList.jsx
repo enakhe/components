@@ -87,7 +87,7 @@ const WaitList = ({ onClick, glassEmail }) => {
                     <Button variant="text" size='md' onClick={onClick} className='capitalize font-family text-red-500'>
                         Cancel
                     </Button>
-                    <Button size='md' type='submit' className='capitalize font-family bg-[#352866]'>
+                    <Button size='md' type='submit' className='capitalize font-family bg-[#352866]' onClick={onClick}>
                         {
                             isLoading ? <Spiner /> : "Join Waitlist"
                         }

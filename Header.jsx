@@ -21,7 +21,7 @@ const Header = () => {
 		<header className="relative z-50 inset-x-0 header-bg">
 			<nav className="rounded-b-lg py-6 fixed top-0 left-0 right-0 bg-[#F1EEF7]" aria-label="Global">
 				<div className='mx-auto lg:max-w-7xl padding-utils px-6 lg:px-0'>
-					<div className='flex justify-between items-center'>
+					<div className='flex justify-between items-center lg:mx-10'>
 						<div className="flex lg:flex-1">
 							<a href="/" className="-m-1.5 p-1.5">
 								<span className="sr-only">Feteflex</span>
