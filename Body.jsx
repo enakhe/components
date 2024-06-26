@@ -13,6 +13,7 @@ import Video from './Video'
 
 import 'animate.css';
 import FAQs from './FAQs'
+import Services from './Services'
 
 const Body = () => {
     const [open, setOpen] = useState(false);
@@ -23,6 +24,7 @@ const Body = () => {
             <Call2Action />
             <OurMission />
             <Features />
+            <Services />
 
             <Fragment>
                 <div className="bg-gradient">

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXTwitter, faFacebook, faInstagram, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faXTwitter, faFacebook, faInstagram, faLinkedin, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons'
 import { navigation } from '../app/objects';
 import { useDispatch, useSelector } from "react-redux";
 import GlassInputNoButton from './GlassInputNoButton';
@@ -151,19 +151,22 @@ const Footer = () => {
                     <span className="text-sm text-gray-400 sm:text-center">© 2024 <a href="https://flowbite.com/" className="hover:underline">Feteflex™</a>. All Rights Reserved
                     </span>
                     <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                        <a href="#" className="text-gray-500 hover:text-white">
+                        <a href="https://x.com/feteflex" className="text-gray-500 hover:text-white">
                             <FontAwesomeIcon icon={faXTwitter} />
                         </a>
-                        <a href="#" className="text-gray-500 hover:text-white">
+                        <a href="https://m.facebook.com/people/Feteflex/100093179137675/" className="text-gray-500 hover:text-white">
                             <FontAwesomeIcon icon={faFacebook} />
                         </a>
-                        <a href="#" className="text-gray-500 hover:text-white">
+                        <a href="http://www.instagram.com/feteflex/" className="text-gray-500 hover:text-white">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
-                        <a href="#" className="text-gray-500 hover:text-white">
+                        <a href="https://www.tiktok.com/@feteflex" className="text-gray-500 hover:text-white">
+                            <FontAwesomeIcon icon={faTiktok} />
+                        </a>
+                        <a href="https://ng.linkedin.com/company/feteflexofficial" className="text-gray-500 hover:text-white">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
-                        <a href="#" className="text-gray-500 hover:text-white">
+                        <a href="https://m.youtube.com/@Feteflex" className="text-gray-500 hover:text-white">
                             <FontAwesomeIcon icon={faYoutube} />
                         </a>
                     </div>
