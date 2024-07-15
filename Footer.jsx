@@ -87,7 +87,7 @@ const Footer = () => {
                         <img src={logo} className='w-24 my-4' />
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-1 my-10">
                             <div>
-                                <h2 className="mb-6 text-[#2a2346] text-sm font-semibold text-white">Features</h2>
+                                <h2 className="mb-6 text-[#2a2346] text-sm font-semibold">Features</h2>
                                 <ul className="text-[#2a2346]">
                                     {
                                         navigation[0].items.map((item, index) => (
@@ -105,7 +105,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div>
-                                <h2 className="mb-6 text-[#2a2346] text-sm font-semibold text-white">Legal</h2>
+                                <h2 className="mb-6 text-[#2a2346] text-sm font-semibold">Legal</h2>
                                 <ul className="text-[#2a2346] font-medium">
                                     <li className="mb-4">
                                         <a href="#" className="text-[#2a2346] font-semibold hover:underline">Privacy Policy</a>
