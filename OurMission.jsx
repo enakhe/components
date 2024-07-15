@@ -15,9 +15,9 @@ const OurMission = () => {
                                     At Feteflex, we’re committed to redefining event planning with creativity and innovative technology through a unified platform.
                                 </p>
                                 <p className='my-2 max-w-2xl text-lg leading-relaxed text-[#2A2346]'>
-                                    Imagine a platform where you can easily find the perfect venue, caterer, entertainment, and more, all at your fingertips<span className='lg:hidden'>...</span>.
+                                    Imagine a platform where you can easily find the perfect venue, caterer, entertainment, and more, all at your fingertips.
                                 </p>
-                                <p className='my-2 max-w-2xl text-lg leading-relaxed text-[#2A2346]'>
+                                <p className='my-2 max-w-2xl text-lg leading-relaxed text-[#2A2346]' id='about'>
                                     Organizing events has never been easy and that is why we aim to simplify that process, providing a dedicated space for effective service marketing.
                                 </p>
                             </ScrollAnimation>
